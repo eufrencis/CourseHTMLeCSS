@@ -489,33 +489,42 @@
 
     <footer>
       <p>Will Barbearia © 2026</p>
-      <p>
+      <p style="font-size: 0.8rem; margin: 10px 0;">
         Ao utilizar este site, você concorda com o direcionamento para
-        plataformas de terceiros (WhatsApp/InBarber) para fins de agendamento
+        plataformas de terceiros (WhatsApp/InBarber) para fins de agendamento.
       </p>
       <p>Desenvolvido por Francis - Developer</p>
     </footer>
 
     <script>
-      function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-        for (var i = 0; i < reveals.length; i++) {
-          var windowHeight = window.innerHeight;
-          var elementTop = reveals[i].getBoundingClientRect().top;
-          var elementVisible = 100;
-          if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-          }
-        }
-      }
-      window.addEventListener("scroll", reveal);
-      reveal();
-    </script>
+      // Função unificada para Animação e Controle do Vídeo
+      const video = document.getElementById("videoWill");
+      const btn = document.getElementById("muteBtn");
+      const reveals = document.querySelectorAll(".reveal");
 
-    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          // Controle de Animação (Reveal)
+          if (entry.target.classList.contains('reveal') && entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+          
+          // Controle do Vídeo (Play/Pause automático)
+          if (entry.target.tagName === 'SECTION' && entry.target.contains(video)) {
+            if (entry.isIntersecting) {
+              video.play();
+            } else {
+              video.pause();
+            }
+          }
+        });
+      }, { threshold: 0.3 });
+
+      // Ativa o vigia para todas as seções e o vídeo
+      reveals.forEach(section => observer.observe(section));
+
+      // Função do botão de som
       function toggleMute() {
-        var video = document.getElementById("videoWill");
-        var btn = document.getElementById("muteBtn");
         if (video.muted) {
           video.muted = false;
           btn.innerHTML = "🔊";
