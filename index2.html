@@ -5,100 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/logo-tec.ico" type="image/x-icon"> <!-- digite link e escolha favicon para mudar a img da aba da pagina. Img tem que estar em fomato ICO-->
     <title>Treinamentos Informática</title>
-    <style>
-        /* ROOT: Equivale ao escopo global do projeto.
-        Defina aqui as "Public Static Final" (variáveis) para facilitar a manutenção.
-        */
-        :root{
-            --preto: black;
-            --branco: white;
-            --cinza: rgb(179, 177, 177);
-            --rosa: rgb(231, 14, 116);
-
-        }
-        /* SELETOR UNIVERSAL: Reseta os padrões do navegador em todos os elementos */
-        *{margin: 0; border: 0; padding: 0; box-sizing: border-box;}
-
-        html{font-family: Arial, Helvetica, sans-serif; font-size: 1em;} /* em: adapta aos tamanhos de telas 1em equivale a mais ou menos 16px tamanho padrao*/ 
-
-        header{
-            background-color: rgb(24, 23, 23) ; 
-            color: var(--branco); 
-            padding: 10px; 
-            text-align: center; 
-            position: sticky; 
-            top: 0px; 
-            width: 100%;
-            z-index: 1000; 
-        }
-
-        body{
-            background-color: var(--cinza);
-
-        }
-
-        main{
-            background-color: var(--branco);
-            padding: 1.5%; 
-            margin: auto; 
-            max-width: 1024px;
-            margin-top: 2.0%;
-            margin-bottom: 3.8%;
-            border-radius: 20px;
-            box-shadow: 1px 1px 5px 0.5px rgb(24, 23, 23) ; /* Sombra do main posivito e negativo muda onde a sombra esta*/
+    <link rel="stylesheet" href="css/Estilo2.css">
     
-        }
-
-        aside{
-            background-color: var(--branco);
-            padding: 1.5%; margin: auto; 
-            max-width: 1024px;
-            margin-top: 2.0%;
-            margin-bottom: 3.8%;
-            border-radius: 20px;
-            box-shadow: 1px 1px 5px 0.5px rgb(24, 23, 23) ;
-
-        }
-        
-        h1{font-size: 2em;}
-        h2{font-size: 1.5em;}
-        h3{font-size: 3em;}
-        h4{font-size: 1em;}
-        h1, h2, h3, h4, h5, h6{padding-top: 0.5%; padding-bottom: 0.5%;}
-
-        /* cONFIGURAÇÕES DE IMAGENS*/
-        img{width: 100%; padding-top: 2%; padding-bottom: 2%;}
-
-        /*CONFIGURAÇÕES DE PARÁGRAFOS*/
-
-        p{padding-top: 0.5%; padding-bottom: 0.5%; text-align: justify;}
-
-        /* Configurações de paragrafos para dispositivos moveis */
-
-        @media(min-width: 320px) and (max-width: 1024px){ /* ajuste para tamanho de tela de celulares */
-
-            p{padding: 1%;}
-
-            header{position: static;} /* tirei o header que acompanha da mt erro em cel */
-            
-            main {margin-left: 1.5%; margin-right: 1.5%;}
-
-            aside{margin-left: 1.5%; margin-right: 1.5%;}
-
-
-
-        }
-
-    </style>
 </head>
 <body>  
 
     <header>
         <h3>Treinamentos Informática</h3>   
         <h4>Desenvolvimento Front End</h4>
+        <!-- Aqui inserimos links do site-->
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Fim</a>
+            <a href="index.html">PetShop</a>
+        </nav>
     </header>
-    <!-- Aqui inserimos links do site-->
-    <nav></nav>
+    
     <br>
    
     <br>
@@ -126,6 +48,9 @@
             </picture>
             <br>
 
+            <button>Saiba mais</button>
+
+            <br>
             <h2>O que você vai aprender?</h2>
 
             <p><strong>HTML5 e CSS3:</strong> Domine a estrutura e o estilo das páginas web. <br>
@@ -167,7 +92,7 @@
     </main>
 
     <aside>
-        <section id = "grid-conteudo"> <!-- é um conteudo a mais relacionado -->
+        <section id = "grid-conteudo"> <!-- é um conteudo a mais relacionado. Diferença entre id e a class: class se utiliza em diversos pontos do site o id é algo único -->
 
             <div class="grid">
 
@@ -183,7 +108,20 @@
         </section>
     </aside>
 
-    <footer></footer>
+    <footer>
+        <div style="max-width: 1024px; margin: auto;"></div>
+        <h3>Treinamentos Informática</h3>   
+    
+        <p>
+            Contato: francisTec@gmail.com <br>
+            <br>
+            WhatsApp: (11) 98235-7611 <br>
+            <br>
+            CNPJ: 40.963.840/0001.74
+        
+        </p>
+
+    </footer>
     
 </body>
 </html> 
