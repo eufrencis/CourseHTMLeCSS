@@ -176,6 +176,23 @@
 
         .bg-whats { background-color: #25d366; }
         .bg-insta { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+        /* Container para o vídeo do Insta */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            padding: 0 10px;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            max-width: 320px; /* Largura ideal para Reels no PC e Celular */
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--dourado);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -244,9 +261,9 @@
         </div>
 
         <section class="reveal" style="margin-top: 50px; padding: 20px;">
-    <h2 style="color: var(--dourado); text-align: center; margin-bottom: 20px; text-transform: uppercase;">Nossa Localização</h2>
+        <h2 style="color: var(--dourado); text-align: center; margin-bottom: 20px; text-transform: uppercase;">Nossa Localização</h2>
     
-    <div style="width: 100%; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.7); border: 1px solid #333;">
+        <div style="width: 100%; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.7); border: 1px solid #333;">
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.258!2d-49.228238!3d-16.746285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935efb966e791d71%3A0x68abc5643a1188ac!2sWill%20BARBEARIA!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
             width="100%" 
@@ -256,18 +273,31 @@
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-    </div>
+        </div>
 
-    <div style="text-align: center; margin-top: 20px; color: #eee; line-height: 1.6;">
+        <div style="text-align: center; margin-top: 20px; color: #eee; line-height: 1.6;">
         <p style="font-size: 1.1rem;">📍 Av. Santa Rita, QD 09 - LT 04 - Jardim Olimpico</p>
         <p style=" font-weight: bold;">Abaixo do batalhão da Polícia Militar</p>
         <p>Aparecida de Goiânia - GO</p>
-    </div>
-</section>
+        </div>
+
+        </section>
+        
+        <section class="reveal">
+            <h2>Conheça a Will Barbearia</h2>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DR4a6vEDcY4/" data-instgrm-version="14" style="background:#000; border:0; margin:0; padding:0; width:100%;">
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>Will Barbearia © 2026</p>
+        <p>Ao utilizar este site, você concorda com o direcionamento para plataformas de terceiros (WhatsApp/InBarber) para fins de agendamento</p>
         <p>Desenvolvido por Francis - Developer</p>
     </footer>
 
