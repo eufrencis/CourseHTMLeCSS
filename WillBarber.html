@@ -485,11 +485,15 @@
           </div>
         </div>
       </section>
+      <video id="videoWill" loop muted playsinline style="cursor: pointer">
+        <source src="img/videobarbearia.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeos.
+      </video>
     </main>
 
     <footer>
       <p>Will Barbearia © 2026</p>
-      <p style="font-size: 0.8rem; margin: 10px 0;">
+      <p style="font-size: 0.8rem; margin: 10px 0">
         Ao utilizar este site, você concorda com o direcionamento para
         plataformas de terceiros (WhatsApp/InBarber) para fins de agendamento.
       </p>
@@ -497,33 +501,48 @@
     </footer>
 
     <script>
-      // Função unificada para Animação e Controle do Vídeo
       const video = document.getElementById("videoWill");
       const btn = document.getElementById("muteBtn");
       const reveals = document.querySelectorAll(".reveal");
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          // Controle de Animação (Reveal)
-          if (entry.target.classList.contains('reveal') && entry.isIntersecting) {
-            entry.target.classList.add("active");
-          }
-          
-          // Controle do Vídeo (Play/Pause automático)
-          if (entry.target.tagName === 'SECTION' && entry.target.contains(video)) {
-            if (entry.isIntersecting) {
-              video.play();
-            } else {
-              video.pause();
+      // 1. "Vigia" para Play Automático na rolagem
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (
+              entry.target.tagName === "SECTION" &&
+              entry.target.contains(video)
+            ) {
+              if (entry.isIntersecting) {
+                video.play();
+              } else {
+                video.pause();
+              }
             }
-          }
-        });
-      }, { threshold: 0.3 });
+            // Animação de revelação das outras partes do site
+            if (
+              entry.target.classList.contains("reveal") &&
+              entry.isIntersecting
+            ) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
 
-      // Ativa o vigia para todas as seções e o vídeo
-      reveals.forEach(section => observer.observe(section));
+      reveals.forEach((section) => observer.observe(section));
 
-      // Função do botão de som
+      // 2. FUNÇÃO NOVA: Play/Pause ao clicar no vídeo
+      video.addEventListener("click", function () {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+
+      // 3. Função do botão de som (continua igual)
       function toggleMute() {
         if (video.muted) {
           video.muted = false;
