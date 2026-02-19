@@ -222,6 +222,7 @@ button:hover {
   position: fixed;
   text-align: center;
   margin: 6rem;
+  p{color: black};
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
