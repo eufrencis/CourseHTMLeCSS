@@ -1,160 +1,288 @@
- /* ROOT: Equivale ao escopo global do projeto.
+/* ROOT: Equivale ao escopo global do projeto.
         Defina aqui as "Public Static Final" (variáveis) para facilitar a manutenção.
         */
-        :root{
-            --preto: black;
-            --branco: white;
-            --cinza: rgb(179, 177, 177);
-            --rosa: rgb(231, 14, 116);
-            --verde: green;
-            --verdeclaro: rgb(81, 189, 81);
-            --corprojeto1: rgb(172, 10, 10);
-            --corprojeto2: rgb(224, 16, 16);
-            --corprojeto3: rgb(151, 42, 42);
-            --corprojeto4: rgb(170, 170,21);
-            --corprojeto5: rgb(247, 247, 7);
-            --corprojeto6: rgb(255, 136, 0);
 
-        
-        }
-        /* SELETOR UNIVERSAL: Reseta os padrões do navegador em todos os elementos */
-        *{margin: 0; border: 0; padding: 0; box-sizing: border-box;}
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
-        html{font-family: Arial, Helvetica, sans-serif; font-size: 1em;} /* em: adapta aos tamanhos de telas 1em equivale a mais ou menos 16px tamanho padrao*/ 
+:root {
+  --preto: black;
+  --branco: white;
+  --cinza: rgb(179, 177, 177);
+  --rosa: rgb(231, 14, 116);
+  --verde: green;
+  --verdeclaro: rgb(81, 189, 81);
+  --corprojeto1: rgb(172, 10, 10);
+  --corprojeto2: rgb(224, 16, 16);
+  --corprojeto3: rgb(151, 42, 42);
+  --corprojeto4: rgb(170, 170, 21);
+  --corprojeto5: rgb(247, 247, 7);
+  --corprojeto6: rgb(255, 136, 0);
+}
+/* SELETOR UNIVERSAL: Reseta os padrões do navegador em todos os elementos */
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        header{
-            background-color:var(--corprojeto1) ; 
-            color: var(--branco); 
-            padding: 10px; 
-            text-align: center; 
-            position: sticky; 
-            top: 0px; 
-            width: 100%;
-            z-index: 1000; 
-        }
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  scroll-behavior: smooth;
+} /* em: adapta aos tamanhos de telas 1em equivale a mais ou menos 16px tamanho padrao*/
 
-        nav{display: block; padding: 5px ; font-size: 1.3em; word-spacing: 12px;}
+header {
+  background: linear-gradient(var(--corprojeto2), var(--corprojeto1));
+  color: var(--branco);
+  padding: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+}
 
-        a{text-decoration: none;color: aliceblue;} /*Text decoration none tira o sublinhado de links**/
+nav {
+  display: block;
+  padding: 5px;
+  font-size: 1.5em;
+  word-spacing: 12px;
+}
 
-        a:hover{color: rgb(34, 181, 240);}
+nav:hover {
+  text-shadow: 1px 1px var(--preto);
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+} /*Text decoration none tira o sublinhado de links**/
+
+a:hover {
+  color: rgb(34, 181, 240);
+}
+
+body {
+  background-color: rgba(218, 218, 218, 0.849);
+}
+
+main {
+  background-color: var(--branco);
+  padding: 1.5%;
+  margin: auto;
+  max-width: 1024px;
+  margin-top: 2%;
+  margin-bottom: 3.8%;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 0.5px rgb(24, 23, 23); /* Sombra do main posivito e negativo muda onde a sombra esta*/
+}
+
+aside {
+  background-color: var(--branco);
+  padding: 1.5%;
+  margin: auto;
+  max-width: 1024px;
+  margin-top: 2%;
+  margin-bottom: 3.8%;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 0.5px rgb(24, 23, 23);
+}
+
+/* Configurações de links de produtos */
+
+.menu {
+  color: var(--branco);
+  background-color: var(--corprojeto1);
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px var(--corprojeto6);
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--corprojeto1);
+  font-family: "Satisfy", cursive;
+  text-shadow: 1px 1px 1px var(--corprojeto6);
+}
+
+h2 {
+  font-size: 1.5em;
+  color: var(--corprojeto1);
+  text-align: center;
+  scroll-margin-top: 150px;
+}
+h3 {
+  font-size: 3em;
+}
+h4 {
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+/* cONFIGURAÇÕES DE IMAGENS*/
+img {
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+#topo {
+  width: 400px;
+  height: 130px;
+  display: block;
+  margin: auto;
+}
+
+/*CONFIGURAÇÕES DE PARÁGRAFOS*/
+
+p {
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  text-align: justify;
+}
+
+/* Configurações de paragrafos para dispositivos moveis */
 
 
+/* COnfiguração das grids */
 
-        body{
-            background-color: var(--cinza);
+.grid-conteudo {
+  background-color: var(--cinza);
+  margin-top: 2px;
+} /* id vc usa o # pra referenciar aq e a classe usa . */
 
-        }
-
-        main{
-            background-color: var(--branco);
-            padding: 1.5%; 
-            margin: auto; 
-            max-width: 1024px;
-            margin-top: 2.0%;
-            margin-bottom: 3.8%;
-            border-radius: 20px;
-            box-shadow: 1px 1px 5px 0.5px rgb(24, 23, 23) ; /* Sombra do main posivito e negativo muda onde a sombra esta*/
-    
-        }
-
-        aside{
-            background-color: var(--branco);
-            padding: 1.5%; margin: auto; 
-            max-width: 1024px;
-            margin-top: 2.0%;
-            margin-bottom: 3.8%;
-            border-radius: 20px;
-            box-shadow: 1px 1px 5px 0.5px rgb(24, 23, 23) ;
-
-        }
-
-        /* Configurações de links de produtos */
-
-        .menu{
-            color: var(--branco);
-            background-color: var(--corprojeto1);
-            padding: 5px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 2px var(--corprojeto6);
-            font-size: 1.3rem;
-            
-        
-        }
-        
-        h1{font-size: 2em; text-align: center; color: var(--corprojeto1);}
-        h2{font-size: 1.5em; color: var(--corprojeto1);}
-        h3{font-size: 3em;}
-        h4{font-size: 1em;}
-        h1, h2, h3, h4, h5, h6{padding-top: 0.5%; padding-bottom: 0.5%;}
-
-        /* cONFIGURAÇÕES DE IMAGENS*/
-        img{width: 100%; padding-top: 2%; padding-bottom: 2%;}
-        #topo{width: 400px; height: 130px;display: block; margin: auto;}
-
-        /*CONFIGURAÇÕES DE PARÁGRAFOS*/
-
-        p{padding-top: 0.5%; padding-bottom: 0.5%; text-align: justify;}
-
-        /* Configurações de paragrafos para dispositivos moveis */
-
-        @media(min-width: 320px) and (max-width: 1024px){ /* ajuste para tamanho de tela de celulares */
-
-            p{padding: 1%;}
-
-            #topo{max-width: 100%; height: auto;}
-
-            header{position: static; } /* tirei o header que acompanha da mt erro em cel */
-            
-            main {margin-left: 1.5%; margin-right: 1.5%;}
-
-            aside{margin-left: 1.5%; margin-right: 1.5%;}
-
-        }
-         /* COnfiguração das grids */
-
-         #grid-conteudo{background-color: var(--cinza); margin-top: 2px;} /* id vc usa o # pra referenciar aq e a classe usa . */
-
-         .grid{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) ); 
-            /* Cria modelo de colunas responsiva onde se tiver em sites com telas maiores ele vai se comportar normal com 300px 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Cria modelo de colunas responsiva onde se tiver em sites com telas maiores ele vai se comportar normal com 300px 
             e em telas menores ele vai identificar o tamanho da tela e vai comecar a fazer a coluna com oq cabe na tela;*/
-            max-width: 1024px ;
-            margin: auto;
-            gap: 1px;
-        }
+  max-width: 1024px;
+  margin: auto;
+  gap: 1px;
+}
 
-        .grid div{background-color: var(--branco); text-align: center; padding: 15px;}
+.grid div {
+  background-color: var(--branco);
+  text-align: center;
+  padding: 15px;
+}
 
+footer {
+  background: linear-gradient(var(--corprojeto1), var(--corprojeto2));
+  color: var(--branco);
+  /* Aumentei um pouco o respiro para ficar igual ao header */
+  text-align: center;
+  max-width: 100%; /* Garante que ele ocupe toda a largura da tela */
+  margin-top: 20px; /* Dá uma distância saudável do conteúdo acima */
+  height: auto;
+}
 
-        footer {
-            background-color: var(--corprojeto1); 
-            color: var(--branco); 
-            /* Aumentei um pouco o respiro para ficar igual ao header */
-            text-align: center;
-            max-width: 100%; /* Garante que ele ocupe toda a largura da tela */
-            margin-top: 20px; /* Dá uma distância saudável do conteúdo acima */
-            height: auto;
-        }   
+#rodape {
+  width: 150px;
+  height: 150px;
+}
 
-        #rodape{width: 150px; height: 150px;}
+footer p {
+  text-align: center; /* Garante que o texto do parágrafo também centralize */
+  font-size: 0.9em; /* Geralmente letras de rodapé são um pouco menores */
+}
 
-        footer p {
-            text-align: center; /* Garante que o texto do parágrafo também centralize */
-            font-size: 0.9em; /* Geralmente letras de rodapé são um pouco menores */
-        }  
-        
-        button{
-            padding: 8px 20px;
-            background-color: var(--verde);
-            color: var(--branco);
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 1.3em;
-            display: block;
-            margin: auto;
-            transition: 0.4s ease; /* Define o tempo da transição ao passar o mouse na frente do botao */
-        }
+button {
+  padding: 8px 20px;
+  background-color: var(--verde);
+  color: var(--branco);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.3em;
+  display: block;
+  margin: auto;
+  transition: 0.4s ease; /* Define o tempo da transição ao passar o mouse na frente do botao */
+}
 
-        button:hover{background: var(--verdeclaro); text-shadow: 1px 1px var(--preto);} /* Define animação de passar o mouse em cima do botao*/
+button:hover {
+  background: var(--verdeclaro);
+  text-shadow: 1px 1px var(--preto);
+} /* Define animação de passar o mouse em cima do botao*/
+
+#whats {
+  width: 90px;
+  height: 40px;
+  right: -50px;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  margin: 6rem;
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  /* ajuste para tamanho de tela de celulares */
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    scroll-margin-top: 180px;
+  }
+
+  p {
+    padding: 1%;
+  }
+
+  #topo {
+    max-width: 80%; /* Reduzi um pouco para dar respiro nas laterais */
+    height: auto;
+    margin: 0 auto;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Remova paddings laterais se houver para ganhar espaço */
+    padding: 10px 0;
+  }
+
+  main {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+
+  aside {
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+
+  nav {
+    display: flex;
+    padding: 5px 0;
+    font-size: 1rem;
+    word-spacing: 12px;
+    gap: 10px;
+    justify-content: center;
+    word-spacing: 0;
+  }
+
+  #whats {
+    width: 80px; /* Faz a div ter apenas o tamanho do conteúdo */
+    height: 30px;
+    bottom: 5px;
+    margin-left: auto; /* Empurra tudo para a direita */
+    margin-right: 70px; /* Distância da borda direita da tela */
+    font-size: small;
+    p{color: black};
+  }
+}
