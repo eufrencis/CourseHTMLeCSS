@@ -60,7 +60,7 @@ a {
 } /*Text decoration none tira o sublinhado de links**/
 
 a:hover {
-  color: rgb(34, 181, 240);
+  color: rgb(1, 13, 17);
 }
 
 body {
@@ -260,11 +260,14 @@ button:hover {
   main {
     margin-left: 1.5%;
     margin-right: 1.5%;
+    margin-top: 39%;
+    
   }
 
   aside {
     margin-left: 1.5%;
     margin-right: 1.5%;
+    
   }
 
   nav {
